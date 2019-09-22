@@ -1,0 +1,11 @@
+table,th,tr,td{
+    border:1.5px solid black;
+    border-collapse: collapse;
+    padding:8px;
+    /* border-radius:18px; */
+    outline:none:
+}
+body{
+    margin-left: 40%;
+    margin-top:10%;
+}

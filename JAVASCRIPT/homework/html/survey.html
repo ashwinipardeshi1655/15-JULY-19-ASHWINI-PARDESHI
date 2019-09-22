@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <style>
+        body{
+            margin-left: 500px;
+            margin-top: 150px;
+            margin-right: 700px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <legend>
+        <fieldset>
+            <form action="welcome.html" method="get">
+                <div>
+                    <label for="First Name">First Name</label><br>
+                    <input onkeyup="validateForm()" type='text' name='uname' required><br><br>
+                </div>
+                <div>
+                    <label for="Last Name">Last Name</label><br>
+                    <input onkeyup="validateForm()" type="text" name='aname' required><br><br>
+                </div>
+                <div>
+                    <label for="Company Name">Company Name</label><br>
+                    <input type="text" name="tname" id="c"><br><br>
+                </div>
+                <div>
+                    <label for="Employee ID">Employee Id</label><br>
+                    <input type="text" name='ename' required><br><br>
+                </div>
+                <div>
+                    <label for="DOJ">Date of Joining</label><br>
+                    <input type="Date" name='dname' required><br><br>
+                </div>
+                <div>
+                    <label for="Gender">Gender</label><br>
+                    <input type='radio' id="f" required>Male
+                    <input type='radio' required>Female
+                    <input type='radio' required>others<br>
+                </div><br>
+                <div>
+                    <label for="Skills" >Skills</label><br>
+                    <input type="checkbox" value='skills' required>Java<br>
+                    <input type="checkbox" value='skills'>SQL<br>
+                    <input type="checkbox" value='skills'>J2EE<br>
+                    <input type="checkbox" value='skills'>Hibernate<br><br>
+                </div>
+                <div>
+                    <button type="submit" name='loginSubmit'>Submit</button>
+                </div>
+
+            </form>
+        </fieldset>
+    </legend>
+    
+
+    <script src="./survey.js"></script>
+</body>
+</html>

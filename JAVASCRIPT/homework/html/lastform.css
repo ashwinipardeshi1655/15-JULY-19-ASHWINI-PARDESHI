@@ -1,0 +1,26 @@
+#p{
+    display: inline-block;
+}
+#d{
+    opacity: 0.4;
+}
+#as{
+    display: inline-block;
+}
+#sh{
+    display: inline-block;
+}
+#sha{
+    float: left;
+}
+body{
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-right: 350px;
+}
+#sh{
+    margin-left: 2%;
+}
+#aaa{
+    display: inline;
+}

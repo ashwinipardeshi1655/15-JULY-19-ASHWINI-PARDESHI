@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Details</title>
+    <link rel="stylesheet" href="./customer.css">
+</head>
+<body>
+    <legend>Customer Details</legend>
+    <fieldset>
+        <form action="welcome.html" method="get">
+            <div id='p'>
+                <label for="username">Full Name</label><br>
+                <input onkeyup='validateForm()' type="text" name='uname' required>
+                <div id='d'>First Name</div>
+            </div>
+            <div id='p'>
+                <label for="lastname"></label>
+                <input onkeyup='validateForm()'type='text' name='lname' required>
+                <div id='d'>Last Name</div>
+            </div><br>
+            <div>
+               <br> <label for="Address">Address</label><br>
+                <input onkeyup='validateForm()' type="text" name='aname' required>
+                <div id='d'>Street Address</div>
+            </div>
+            <div>
+                <input type="text">
+                <div id='d'>Street Address line 2</div>
+            </div>
+            <div id='as'>
+                <input type="text">
+                <div id='d'>City</div>
+            </div>
+            <div id='as'>
+                <input type="text">
+                <div id='d'>State</div>
+            </div><br>
+            <div id='sha'>
+                <input type="text">
+                <div id='d'>Postal Code</div>
+            </div>
+            <div id='sh'>
+                <select name="country" id='na' name='na'>
+                <option value="country" selected disabled>Select</option>
+                <option value="country">India</option>
+                <option value="country">USA</option>
+                <option value="country">California</option>
+                <div id='d'>Country</div>
+                </select>
+            </div>
+            <div><br>
+                <button type='submit' name="loginSubmit">Submit</button>
+            </div>
+        </form>
+    </fieldset>
+    <script src="./customer.js"></script>
+    
+</body>
+</html>
