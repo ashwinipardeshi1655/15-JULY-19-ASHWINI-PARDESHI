@@ -1,0 +1,22 @@
+fieldset{
+    background-color: blueviolet;
+    border-radius:40px;
+    text-align: center;
+    width:40%;
+    margin:9% 25% 5% 30%;
+    
+}
+div{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.head2{
+    text-align: center;
+}
+.abc{
+    border-radius: 50px;
+    margin-left: 14%;
+}
+.ash{
+    margin-right:5%;
+}
+

@@ -1,0 +1,22 @@
+table,th,tr,td{
+    border:1.5px solid black;
+    border-collapse: collapse;
+    padding:18px;
+    /* border-radius:18px; */
+    outline:none:
+}
+body{
+    margin-left: 40%;
+    margin-top:20%;
+}
+table{
+    background-color: gray;
+    cursor:pointer;
+}
+caption{
+background-color: gray;
+font-style: italic;
+}
+th{
+    padding-top: 0px;
+}

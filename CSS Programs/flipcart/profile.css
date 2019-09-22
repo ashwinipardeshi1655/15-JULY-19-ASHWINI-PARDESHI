@@ -1,0 +1,21 @@
+span{
+    display: inline-block;
+}
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+}
+label{
+    color: white;
+}
+form{
+    text-align: center;
+    width:20%;
+    height:20%;
+}
+body{
+    margin-left: 40%;
+    margin-top: 15%;
+}
