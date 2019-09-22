@@ -1,0 +1,53 @@
+<div class="container">
+        <div class="col-md-6 offset-md-3 mt-4">
+          <div class="card card-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Sr No.</th>
+                  <th>Tasks</th>
+                  <th>Delete</th>
+                  <th>Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let task of view;index as i">
+                 <td>{{i+1}}</td>
+                 <td>{{view[i].task}}</td>               
+                 <td><button class="btn btn-danger" (click)='deleteData(i)'>Delete</button></td>
+                 <td>
+                  <button type="button" class="btn btn-primary" data-toggle="modal"  data-target="#exampleModal">
+                    Edit
+                  </button>      
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <form #form='ngForm' (ngSubmit)='addData(view[i].task,i)'>
+                                <legend>Add Task</legend>
+                                <div class="form-group">
+                                    <label for="taskname">Add Task Name</label>        
+                                    <input type="text" class="form-control" id="" placeholder="Enter Task" name="taskname" #taskname="ngModel" [(ngModel)] = 'view[i].task' >         
+                                </div>
+                                <button type="submit" class="btn btn-primary" >Submit</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div></td>               
+                </tr>
+              </tbody>
+          </table>
+      </div>
+      </div>
+      </div>
