@@ -1,0 +1,5 @@
+<p class = 'bg-dark text-white text-center'>parent component!</p>
+<input type="text" class="form-group mt-2 mb-2" [(ngModel)]= 'inputData'>
+<h1>{{dataFromChild}}</h1>
+<app-child [dataFromParent] = 'inputData' (childData)='dataFromChild=$event'></app-child>
+ 

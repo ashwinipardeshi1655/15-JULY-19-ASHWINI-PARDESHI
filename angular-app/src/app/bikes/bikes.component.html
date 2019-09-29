@@ -1,0 +1,15 @@
+
+<div class="container mt-4">
+    <div class="col-md-3 float-left">
+    <div class="card card-body" *ngFor='let bike of bikes'>
+        <img src="{{bike.img}}" alt="" class="card-img-top"
+        (click)='sendBike(bike)'>
+        <h4 class="card-title">{{bike.brand}}</h4>
+
+
+
+    </div>
+</div>
+
+<app-bike-details [bikeDetails] = 'bikeData'></app-bike-details>
+</div>

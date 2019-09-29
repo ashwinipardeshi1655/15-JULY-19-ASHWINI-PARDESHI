@@ -1,0 +1,49 @@
+<h1>{{name}}</h1>              <!--   interpolation -->
+<h1>{{5+5}}</h1>
+
+<!-- property binding -->
+<img [src]="imgURL" alt="friendshipday" > 
+
+<!-- string interpollation          -->
+<img src="{{imgURL}}" alt="friendshipday" >
+
+<!-- here we have apply property binding and string interpollation at a time for same purpose -->
+<!-- <img [src]="{{imgURL}}" alt="friendshipday" > -->
+
+<!-- class binding -->
+<h1 [class] = 'textClasses'>{{23+45}}</h1>  
+
+<!-- class binding way 2 = conditional statement -->
+<h1 [class.bg-danger]="redColor" [class.bg-success]='!redColor'>{{5*5}}</h1>  
+
+<!-- style binding -->
+<p [style.background]='paragraphStyle'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, cumque!</p>
+
+<!-- using ternery operator -->
+<p [style.background]="ternery? 'black': 'yellow' " [style.pading]='padding'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, cumque!</p>
+
+<table class='table table-bordered'>
+    <thead>
+        <tr>
+            <th [attr.colspan]="columnspan">Students</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Yadnesh</td>
+        </tr>
+        <tr>
+                <td>2</td>
+                <td>Chetna</td>
+            </tr>
+            <tr>
+                    <td>3</td>
+                    <td>Suresh</td>
+                </tr>
+                <tr>
+                        <td>4</td>
+                        <td>Seema</td>
+                    </tr>
+    </tbody>
+</table>

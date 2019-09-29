@@ -1,0 +1,15 @@
+<!-- Two way data binding -->
+<!-- event binding -->
+<div class="col-md-4 offset-md-4 card card-body mt-5">
+    <input type="text" [(ngModel)]="dataFromInput" class="form-control" (keyup)='buttonEvent(dataFromInput)'>
+</div>
+
+<!-- <h1 class="text-center">{{dataFromInput}}</h1> -->
+
+<!-- <img src="{{dataFromInput}}" alt=""> -->
+
+<button class="btn btn-primary">Give Alert</button>
+
+<!-- mixure of style binding and event binding -->
+<h1 class="text-center" [style.background]='backgroundColor'>{{dataFromInput}}</h1>
+<button class="btn btn-dark" (click)='changeColor(dataFromInput)'>change the color</button>
