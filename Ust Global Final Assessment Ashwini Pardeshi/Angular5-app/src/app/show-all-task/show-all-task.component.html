@@ -1,0 +1,17 @@
+<table class="table table-bordered table-hover bg-dark text-light">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let task of service.taskInfo'>
+            <td>{{task.taskName}}</td>
+            <td>{{task.startDate}}</td>
+            <td>{{task.endDate}}</td>
+
+        </tr>
+    </tbody>
+</table>

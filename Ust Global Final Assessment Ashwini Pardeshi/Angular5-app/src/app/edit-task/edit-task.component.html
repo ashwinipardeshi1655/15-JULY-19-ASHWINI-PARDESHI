@@ -1,0 +1,23 @@
+<div class="container">
+        <div class="col-md-8 offset-2">
+                <table class="table table-bordered table-stripped table-dark">
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Delete</th>
+                    <th>Complete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let task of service.taskInfo'>
+                    <td>{{task.taskName}}</td>
+                    <td><button type="button" class="btn btn-outline-danger"
+                            (click)='deleteTask(task.taskId)'>Delete</button></td>
+                    <td><button type="button" class="btn btn-outline-success"
+                            (click)='updateTask(task)'>Completed</button></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>

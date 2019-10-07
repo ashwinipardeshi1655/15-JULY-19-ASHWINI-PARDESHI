@@ -1,0 +1,23 @@
+<div class="container">
+        <div class="col-md-8 offset-3 mt-5 card card-body">
+
+        <fieldset>
+            <form action="" method="POST" #addTask='ngForm' (ngSubmit)='sendData(addTask)'>
+                <h1 class="text-center bg-dark text-white">Login</h1>
+
+
+                <div class="form-group">
+                    <label for="taskName">Task Name</label>
+                    <input type="text" class="form-control" name="taskName" placeholder="Enter Task name"
+                        #taskName='ngModel' ngModel>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-success">Add Task</button>
+                </div>
+
+
+            </form>
+        </fieldset>
+    </div>
+</div>
