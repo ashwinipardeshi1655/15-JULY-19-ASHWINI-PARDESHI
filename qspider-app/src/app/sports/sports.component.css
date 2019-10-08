@@ -1,0 +1,13 @@
+#newsdisplay{
+    width:800px;
+    height:550px;
+    margin-bottom: 10px;
+}
+#new{
+    width:330px;
+    height:250px;
+}
+.card{
+    background-color: black;
+    color: antiquewhite;
+}
