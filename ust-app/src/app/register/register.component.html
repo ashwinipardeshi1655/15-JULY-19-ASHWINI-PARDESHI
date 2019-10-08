@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class= "card card-body col-md-6 offset-3 mt-5">
+    <form action="" [formGroup]='registerForm' (ngSubmit)='printForm(registerForm)'>
+        <legend><h4 class="text-center">Registration</h4></legend>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" placeholder="Enter Username" name="name" formControlName = 'name'>
+                <div *ngIf='name.touched && name.invalid'>
+                    <div class="alert alert-danger" *ngIf='name.errors.minlength'>minimum length is 3</div>
+                    <div class="alert alert-danger" *ngIf='name.errors.required'>input field is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" class="form-control" placeholder="Enter Email ID" name="email" formControlName='email'>
+                <div *ngIf='email.touched && email.invalid'>
+                    <div class="alert alert-danger" *ngIf='email.errors.noSpace'>no space should be given</div>
+                    <div class="alert alert-danger" *ngIf='email.errors.required'>input field is required</div>
+                    <div class="alert alert-danger" *ngIf='email.errors.minlength(5)'>minimum length is 5</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="number">Mobile No</label>
+                <input type="tel" name="number" id="number" class="form-control" name="number" formControlName='number'>
+                <div *ngIf='number.touched && number.invalid'>
+                    <div class='alert alert-primary' *ngIf='number.errors.required'>input field is required</div>
+                    <div class='alert alert-primary' *ngIf='number.errors.minlength(10)'>miniimum length is 10</div>
+                </div>
+            </div>
+            <div class="btn btn-group col-md-10 offset-1">
+                <button type="submit" class="btn btn-outline-success">Register</button>
+                <button type="reset" class="btn btn-outline-danger">Reset</button>
+            </div>
+                
+        
+
+    </form>
+    </div>
+    </div>
+</body>
+</html>

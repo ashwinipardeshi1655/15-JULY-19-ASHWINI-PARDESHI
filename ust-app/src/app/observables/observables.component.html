@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>Index</tr>
+        <tr>Name</tr>
+        <tr>Company</tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let user of UserService.users; index as (i)'>
+       <td>{{i+1}}</td>
+       <td>{{user.Name}}</td>
+       <td>{{user.Company}}</td>
+    </tr>
+    </tbody>
+</table>
