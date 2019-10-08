@@ -1,0 +1,58 @@
+form{
+    font-family: cursive;
+    border:1px solid blue;
+    
+    width: 300px;
+    height: 250px;
+    margin-left:516px;
+    margin-top: 193px; 
+    text-align: center;
+    border-radius: 25px;
+    /* background: white; */
+    background-image: url('./200w.webp');
+    background-size: cover;
+    box-shadow: 0 0 250px  red;
+}
+
+body{ 
+ /* margin-left: 400px; 
+ margin-top: 100px;  */
+ /* background-color: aqua; */
+background-image:url('./temple-of-hercules-4329360__340.jpg');
+background-size: cover;
+color:white;
+}
+
+
+ input[type="text"],input[type="password"] 
+ { 
+     width:250px; 
+     height:30px; 
+     border: 2px solid black;
+     border-radius: 50px; 
+     text-align: center;
+ } 
+
+ button
+ {
+     margin-top: 20px;
+     width: 150px;
+     height: 25px;
+     border-radius: 50px;
+     background-color: blue;
+ }
+
+
+ input[type="text"]:focus, input[type="password"]:focus{
+     outline: none;
+     background-color: violet;
+ }
+
+ button:hover{
+     background-color: brown;
+     outline: none;
+     cursor: pointer;
+ box-shadow: 0 0 15px yellow;
+    }
+
+

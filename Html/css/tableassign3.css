@@ -1,0 +1,9 @@
+table,th,td,tr{
+    border:1px solid black;
+font-size: 50px;
+    text-align:left;
+}
+body{
+    margin-left: 35%;
+    margin-top: 15%;
+}

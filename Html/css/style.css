@@ -1,0 +1,15 @@
+span img{
+     
+     width: 30%;
+     height:200px;
+     display:inline-block;
+     margin: 0.5%;
+}
+h1{
+    color: brown;
+
+    direction: rtl;
+}
+body{
+    background: lightblue;
+}

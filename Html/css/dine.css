@@ -1,0 +1,62 @@
+p{
+    display: inline;
+}
+.month{
+    margin-left: 84px;
+}
+.day{
+    margin-left: 140px;
+}
+.year{
+    margin-left: 156px;
+}
+
+legend{
+    text-align: center;
+}
+
+#di{
+    margin-left: 57px;
+}
+#to{
+    margin-left: 190px;
+}
+#ex{
+    margin-left: 86px;
+}
+#go{
+    margin-left: 190px;
+}
+#av{
+    margin-left: 190px;
+}
+#dis{
+    margin-left: 190px;
+}
+div{
+    margin-top: 26px;
+}
+#exe{
+    margin-left: 69px;
+}
+#goo{
+    margin-left: 133px;
+}
+#exed{
+    margin-left: 102px;
+}
+#exec{
+    margin-left: 64px;
+}
+#execl{
+    margin-left: 64px;
+}
+#execle{
+    margin-left: 137px;
+}
+#execlet{
+    margin-left: 48px;
+}
+label{
+    font-weight: bold;
+}

@@ -1,0 +1,52 @@
+td{
+    background: blue;
+    border-radius: 10px;
+}
+
+th{
+    background: red;
+    border-radius: 10px;
+
+}
+
+form{
+    
+        margin: 10%;
+        /*height: 100px;*/
+    }
+    
+
+    fieldset {
+        width: 50%;
+        background: skyblue;
+        border-radius: 24px;
+        text-align: center;
+      /*  height: 305px;
+        padding: 50px; */
+        margin-left: 275px;
+    }
+div
+{
+    
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+h1{
+    text-align: center;
+}
+ form label{
+    text-align: left;
+}
+.usr{
+    margin-right: 50px;
+}
+.pas{
+    margin-right: 90px;
+}
+.emi{
+    margin-right: 120px;
+}
+.unm{
+    margin-right: 120px;
+}

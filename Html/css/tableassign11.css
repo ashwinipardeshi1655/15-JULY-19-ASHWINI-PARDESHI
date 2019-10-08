@@ -1,0 +1,33 @@
+body{
+    margin-left: 35%;
+    margin-top: 15%;
+}
+table,td,th{
+    border: 5px solid black;
+    border-collapse: collapse;
+    background-color: grey;
+     font-size: 25px; 
+  
+}
+
+
+table{
+    border-radius: 50px;
+    margin:50px 30px 20px 50px;   
+}
+caption{background-color: grey;
+
+}
+th{
+    text-align:center;
+    padding:0px 20px 20px 20px;
+
+}
+td{
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+b{
+    padding :5px;
+}

@@ -1,0 +1,26 @@
+table, th td{
+    border: 3px solid black;
+    border-collapse: collapse;
+    
+}
+table{
+    width: 29%;
+    margin-left: 415px;
+    margin-top: 272px;
+    background-color: grey;
+    outline: none; 
+    
+}
+/* body{
+    background-color: grey;
+} */
+td{
+    border: 3px solid black; 
+}
+th{
+    border: 3px solid black; 
+}
+caption{
+    font-style: italic;
+    background-color: grey;
+}

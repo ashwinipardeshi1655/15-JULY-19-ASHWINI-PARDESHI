@@ -1,0 +1,73 @@
+div{
+    margin-top: 200px;
+    margin-left: 200px;
+    }
+span{
+display: inline-block;
+margin: 8px;
+padding: 20px 25px;
+box-shadow: 0 0 15px black;
+ animation: vig 1s infinite linear;  
+  }
+   @keyframes vig{
+   0%{
+       transform: translateX(0px);
+   }
+     50%{
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0px);
+    } 
+   }
+
+   span:nth-child(1){
+ background: linear-gradient(45deg, black, blue);
+  animation-delay: 0.1s;
+  box-shadow: 0 10px 15px black;  
+} 
+span:nth-child(2){
+    background: linear-gradient(45deg, black,rgb(109, 109, 219));
+     animation-delay: 0.2s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(3){
+    background: linear-gradient(45deg, black,rgb(109, 109, 219));
+     animation-delay: 0.3s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(4){
+    background: linear-gradient(45deg, black,rgb(109, 109, 219));
+     animation-delay: 0.4s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(5){
+    background: linear-gradient(45deg, black, rgb(109, 109, 219));
+     animation-delay: 0.5s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(6){
+    background: linear-gradient(45deg, black, rgb(109, 109, 219));
+     animation-delay: 0.6s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(7){
+    background: linear-gradient(45deg, black, rgb(109, 109, 219));
+     animation-delay: 0.7s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(8){
+    background: linear-gradient(45deg, black,rgb(109, 109, 219));
+     animation-delay: 0.8s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(9){
+    background: linear-gradient(45deg, black,rgb(109, 109, 219));
+     animation-delay: 0.9s;
+     box-shadow: 0 10px 15px black;  
+   } 
+   span:nth-child(10){
+    background: linear-gradient(45deg, black,rgb(109, 109, 219));
+     animation-delay: 1s;
+     box-shadow: 0 10px 15px black;  
+   } 

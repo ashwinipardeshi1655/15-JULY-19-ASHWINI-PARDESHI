@@ -1,0 +1,142 @@
+h2{
+    margin-left: 27px;
+    margin-top: 15px;
+}
+/* #line{
+     border-collapse: collapse;   
+     color: whitesmoke;
+      border-radius: 15px;
+     background-color: rgb(17, 228, 69);
+     margin-left: 1200px;
+     margin-bottom: -100px;
+     height: 08%;
+     width:169px;
+     display: block;
+} */
+p{
+    margin-left: 25px;
+    margin-top: -20px;
+    
+}
+#dv{
+    font-weight: 1000;
+}
+.dvi{
+    width: 5%;
+    margin-left: 56px;
+}
+#take{
+    margin-left: 133px;
+}
+#gd{
+    margin-left: 137px;
+}
+#ex{
+    margin-left: 38px;
+}
+form{
+    margin-left: 50px;
+}
+#mon{
+    display: block;
+    margin-top: 1px;
+    margin-left: 145px;
+    color:  lightgrey;
+}
+#day{
+    display: block;
+    margin-top: -19px;
+    margin-left: 280px;
+    color:  lightgrey;
+
+}
+#year{
+    display: block;
+    margin-top: -19px;
+    margin-left: 410px;
+    color:  lightgrey;
+
+}
+h1{
+    margin-bottom: 1px;
+}
+#ex1{
+    margin-left: 75px;
+}
+#gd1{
+    margin-left: 136px;
+}
+
+#ex2{
+    margin-left: 50px;
+}
+#ex3{
+    margin-left: 17px;
+}
+#ex4{
+    margin-left: 12px;
+}
+#ex5{
+    margin-left: 89px;
+}
+#ex6{
+    margin-left: -4px;
+}
+#txt{
+    height: 60%;
+    width: 60%;
+}
+.cmnt{
+    font-weight: 1000;
+}
+.aim{
+    font-weight: 1000;
+}
+#opt{
+    width:25%;
+}
+#ag{
+    margin-left: 84px;
+    width: 25%;
+}
+#mail{
+    font-weight: 1000;
+    width: 25%;
+}
+#sub{
+    margin-left: 300px;
+}
+#mal{
+    font-weight: 1000;
+}
+.service{
+    margin-bottom: 10px;
+}
+h1{
+    display: inline;
+    margin-right: 0px;
+    border-right-width: 0px;
+    /* background-color: black; */
+    padding-right: 100px;
+}
+button{
+    display: inline-block;
+    margin-left: 1275px;
+    margin-bottom: -94px;
+    margin-top: -25px;
+    width: 10%;
+    height:10%;
+    border-radius: 10px;
+    background-color:  rgb(13, 230, 13);
+}
+button:hover{
+    cursor: pointer;
+
+}
+button:focus{
+    outline: none;
+}
+#l1{
+    margin-top: 50px;
+}
+
