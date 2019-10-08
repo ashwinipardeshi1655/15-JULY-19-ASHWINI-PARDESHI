@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/facebook.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in to Facebook</title>
+    
+    
+    
+    
+<link rel="stylesheet" href="./Log in to Facebook_files/bootstrap.css"><link rel="stylesheet" href="./Log in to Facebook_files/all.css"><link rel="stylesheet" href="./Log in to Facebook_files/facebook.css"></head>
+<body style="background-color:  rgb(207, 207, 223)">
+    <!-- <div class="container"> -->
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  rgb(84, 84, 136)">
+                    <a class="navbar-brand" href="http://127.0.0.1:5500/facebook.html#"><h1 class="offset-8">facebook<button type="submit" class="btn btn-success  offset-3">Sign Up</button></h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </nav>
+                   
+                        <div class="container">
+                        <div class="card col-md-6 mt-5 offset-3">  
+                                <div class="card-body">
+                            <form action="http://127.0.0.1:5500/facebook.html" method="POST" role="form">
+                                <legend style="text-align: center">Login to facebook</legend>
+                            
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Email address or phone no">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="ashu" style="background-color: rgb(84, 84, 136)">Log In</button>
+                            <div>
+                               <span><a href="http://127.0.0.1:5500/Gform.html">
+                                <class="ml-3">Forget account?   
+                                </class="ml-3"></a></span>
+                               <span> <a href="http://127.0.0.1:5500/form.html">
+                                  Sign up for facebook
+                                </a></span>
+                        </div>
+
+                            </form>
+                            </div>
+                            </div>
+                        
+                      
+                    </div>
+                  
+
+    
+    <script src="./Log in to Facebook_files/jquery-3.4.1.js.download"></script>
+    <script src="./Log in to Facebook_files/bootstrap.js.download"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
