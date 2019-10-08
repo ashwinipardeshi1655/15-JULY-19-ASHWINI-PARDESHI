@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="obj" class="com.ust.usttyspringcore.beans.HelloWorld" autowire="byType">
+		<property name="msg" value="Hello World !!!!!!!!!!"></property>
+		<property name="count" value="10" />
+		<!-- <property name="animal" ref="human" /> -->
+		<property name="map">
+			<map>
+				<entry key="Abc" value="123" />
+				<entry key="Xyz" value="987" />
+			</map>
+		</property>
+
+		<property name="list">
+			<list>
+				<value>Ashwini</value>
+				<value>Ashwini</value>
+				<value>Ashwini</value>
+			</list>
+		</property>
+
+		<property name="set">
+			<set>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+			</set>
+		</property>
+		<property name="arraylist">
+			<array>
+				<list>
+					<value>viggy</value>
+					<value>viggy</value>
+				</list>
+		</array>
+		</property>
+	</bean>
+
+	<bean id="pet" class="com.ust.usttyspringcore.beans.Pet">
+		<constructor-arg name="name" value="viggy"></constructor-arg>
+		<constructor-arg name="animal" ref="dog"></constructor-arg>
+	</bean>
+
+	<bean id="dog" class="com.ust.usttyspringcore.beans.Dog" />
+
+	<bean id="human" class="com.ust.usttyspringcore.beans.Human" />
+
+</beans>
