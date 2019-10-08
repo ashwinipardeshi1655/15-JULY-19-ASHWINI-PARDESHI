@@ -1,0 +1,19 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "html",
+    "ts"
+  ],
+  "author": "ashwini",
+  "license": "ISC",
+  "dependencies": {
+    "systemjs": "^0.19.36"
+  }
+}
