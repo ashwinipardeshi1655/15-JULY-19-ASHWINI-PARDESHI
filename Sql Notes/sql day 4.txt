@@ -1,0 +1,392 @@
+
+
+1). WAQ to change blood group column name to bg and display id and blood_group?
+
+mysql> select id,name,Blood_group as Bg from employee_info;
++-----+---------+------+
+| id  | name    | Bg   |
++-----+---------+------+
+| 101 | Vignesh | O +  |
+| 102 | Indhu   | O +  |
+| 103 | Aniket  | O +  |
+| 104 | Varun   | A +  |
+| 105 | Saurabh | AB + |
+| 106 | Vishal  | A +  |
+| 107 | Pranali | B +  |
+| 108 | Ashwini | A +  |
+| 109 | Atharva | AB - |
+| 110 | Parth   | B -  |
+| 111 | Santosh | O +  |
+| 112 | Mukesh  | AB + |
+| 113 | Furqan  | A -  |
+| 114 | Aman    | O -  |
+| 115 | Avinash | B +  |
++-----+---------+------+
+15 rows in set (0.00 sec)
+
+2).WAQ to display employee_name, salary, designation and his/her annual salary?
+
+ select name,salary,designation,salary*12 as annual_salary from employee_info;
++---------+--------+--------------------+---------------+
+| name    | salary | designation        | annual_salary |
++---------+--------+--------------------+---------------+
+| Vignesh |  30000 | Software Developer |        360000 |
+| Indhu   |  70000 | HR                 |        840000 |
+| Aniket  |  25000 | Analyst            |        300000 |
+| Varun   |  70000 | HR                 |        840000 |
+| Saurabh |  30000 | Software Developer |        360000 |
+| Vishal  |  40000 | Tester             |        480000 |
+| Pranali |  80000 | HR                 |        960000 |
+| Ashwini |  30000 | Software Developer |        360000 |
+| Atharva |  90000 | Salesman           |       1080000 |
+| Parth   |  90000 | Salesman           |       1080000 |
+| Santosh |  35000 | Clerk              |        420000 |
+| Mukesh  |  36000 | Tester             |        432000 |
+| Furqan  |  39000 | Salesman           |        468000 |
+| Aman    |  35000 | Analyst            |        420000 |
+| Avinash |  90000 | Clerk              |       1080000 |
++---------+--------+--------------------+---------------+
+15 rows in set (0.05 sec)
+
+3).WAQ to display employee_name, salary, designation and his/her annual salary without using 'as' ?
+
+mysql> select name,salary,designation,salary*12 annualSalary from employee_info;
++---------+--------+--------------------+--------------+
+| name    | salary | designation        | annualSalary |
++---------+--------+--------------------+--------------+
+| Vignesh |  30000 | Software Developer |       360000 |
+| Indhu   |  70000 | HR                 |       840000 |
+| Aniket  |  25000 | Analyst            |       300000 |
+| Varun   |  70000 | HR                 |       840000 |
+| Saurabh |  30000 | Software Developer |       360000 |
+| Vishal  |  40000 | Tester             |       480000 |
+| Pranali |  80000 | HR                 |       960000 |
+| Ashwini |  30000 | Software Developer |       360000 |
+| Atharva |  90000 | Salesman           |      1080000 |
+| Parth   |  90000 | Salesman           |      1080000 |
+| Santosh |  35000 | Clerk              |       420000 |
+| Mukesh  |  36000 | Tester             |       432000 |
+| Furqan  |  39000 | Salesman           |       468000 |
+| Aman    |  35000 | Analyst            |       420000 |
+| Avinash |  90000 | Clerk              |      1080000 |
++---------+--------+--------------------+--------------+
+15 rows in set (0.00 sec)
+
+4). WAQ to give alias name for all the columns present in your employee_info ?
+
+mysql> select id as eid, name as ename,email as emid,designation as pos,mobile_number as phno,age as a,Date_of_birth as DOB,Date_of_Joining,Salary as sal,Dept_id as did,Blood_group as Bg from employee_info;
++-----+---------+-------------------------------+--------------------+------------+------+------------+-----------------+-------+------+------+
+| eid | ename   | emid                          | pos                | phno       | a    | DOB        | Date_of_Joining | sal   | did  | Bg   |
++-----+---------+-------------------------------+--------------------+------------+------+------------+-----------------+-------+------+------+
+| 101 | Vignesh | viggyvaithiar18@gmail.com     | Software Developer | 9029937984 |   22 | 1997-01-22 | 2019-08-17      | 30000 |   10 | O +  |
+| 102 | Indhu   | indhupofficial@gmail.com      | HR                 | 8291179392 |   27 | 1992-07-19 | 2015-04-25      | 70000 |   30 | O +  |
+| 103 | Aniket  | aniketv1127@gmail.com         | Analyst            | 8850190638 |   25 | 1994-07-27 | 2014-01-19      | 25000 |   20 | O +  |
+| 104 | Varun   | sonawanevaruns@gmail.com      | HR                 | 9870763923 |   29 | 1990-11-25 | 2012-08-17      | 70000 |   40 | A +  |
+| 105 | Saurabh | saurabhjha123.sj95@gmail.com  | Software Developer | 8369882274 |   22 | 1997-02-02 | 2019-08-17      | 30000 |   20 | AB + |
+| 106 | Vishal  | vishalpippirishetti@gmail.com | Tester             | 8928088554 |   29 | 1990-12-05 | 2015-01-22      | 40000 |   10 | A +  |
+| 107 | Pranali | shirodkarpranali123@gmail.com | HR                 | 9022314944 |   30 | 1989-03-16 | 2009-12-05      | 80000 |   10 | B +  |
+| 108 | Ashwini | ashwinipardeshi1655@gmail.com | Software Developer | 9326130118 |   21 | 1998-01-08 | 2019-08-27      | 30000 |   30 | A +  |
+| 109 | Atharva | toskaratharva07@gmail.com     | Salesman           | 8369882274 |   20 | 1998-09-19 | 2019-06-30      | 90000 |   20 | AB - |
+| 110 | Parth   | parth.hursale@gmail.com       | Salesman           | 8652162963 |   20 | 1998-04-30 | 2019-06-30      | 90000 |   10 | B -  |
+| 111 | Santosh | santosh.r.chaurasia@gmail.com | Clerk              | 8850380194 |   26 | 1993-04-20 | 2013-02-12      | 35000 |   40 | O +  |
+| 112 | Mukesh  | my0027@gmail.com              | Tester             | 7875853740 |   23 | 1995-12-09 | 2018-05-17      | 36000 |   30 | AB + |
+| 113 | Furqan  | shaikhfurqan75@gmail.com      | Salesman           | 9029228218 |   28 | 1991-01-12 | 2009-04-07      | 39000 |   10 | A -  |
+| 114 | Aman    | aman.m.singh@gmail.com        | Analyst            | 7738872745 |   24 | 1995-03-27 | 2016-07-03      | 35000 |   40 | O -  |
+| 115 | Avinash | avinashmonde1997@gmail.com    | Clerk              | 9820958424 |   21 | 1998-03-01 | 2019-06-30      | 90000 |   20 | B +  |
++-----+---------+-------------------------------+--------------------+------------+------+------------+-----------------+-------+------+------+
+
+5). Waq to display unique dept_id from employee_info?
+
+mysql> select distinct dept_id from employee_info;
+	+---------+
+	| dept_id |
+	+---------+
+	|      10 |
+	|      30 |
+	|      20 |
+	|      40 |
+	+---------+
+4 rows in set (0.06 sec)
+
+6). Waq to display unique value of desgination as well as dept_id from employee_info ?
+
+
+ select distinct dept_id,designation from employee_info;
++---------+--------------------+
+| dept_id | designation        |
++---------+--------------------+
+|      10 | Software Developer |
+|      30 | HR                 |
+|      20 | Analyst            |
+|      40 | HR                 |
+|      20 | Software Developer |
+|      10 | Tester             |
+|      10 | HR                 |
+|      30 | Software Developer |
+|      20 | Salesman           |
+|      10 | Salesman           |
+|      40 | Clerk              |
+|      30 | Tester             |
+|      40 | Analyst            |
+|      20 | Clerk              |
++---------+--------------------+
+14 rows in set (0.00 sec)
+
+7).Waq to display unique value of desgination,dept_id and age from employee_info ?
+
+mysql> select distinct dept_id,designation,age from employee_info;
++---------+--------------------+------+
+| dept_id | designation        | age  |
++---------+--------------------+------+
+|      10 | Software Developer |   22 |
+|      30 | HR                 |   27 |
+|      20 | Analyst            |   25 |
+|      40 | HR                 |   29 |
+|      20 | Software Developer |   22 |
+|      10 | Tester             |   29 |
+|      10 | HR                 |   30 |
+|      30 | Software Developer |   21 |
+|      20 | Salesman           |   20 |
+|      10 | Salesman           |   20 |
+|      40 | Clerk              |   26 |
+|      30 | Tester             |   23 |
+|      10 | Salesman           |   28 |
+|      40 | Analyst            |   24 |
+|      20 | Clerk              |   21 |
++---------+--------------------+------+
+15 rows in set (0.01 sec)
+
+8). WAQ to display the name,salary,and salary increment by 5000 from employee_name?
+
+mysql> select name,salary, salary+5000 salary_increment from employee_info;
++---------+--------+------------------+
+| name    | salary | salary_increment |
++---------+--------+------------------+
+| Vignesh |  30000 |            35000 |
+| Indhu   |  70000 |            75000 |
+| Aniket  |  25000 |            30000 |
+| Varun   |  70000 |            75000 |
+| Saurabh |  30000 |            35000 |
+| Vishal  |  40000 |            45000 |
+| Pranali |  80000 |            85000 |
+| Ashwini |  30000 |            35000 |
+| Atharva |  90000 |            95000 |
+| Parth   |  90000 |            95000 |
+| Santosh |  35000 |            40000 |
+| Mukesh  |  36000 |            41000 |
+| Furqan  |  39000 |            44000 |
+| Aman    |  35000 |            40000 |
+| Avinash |  90000 |            95000 |
++---------+--------+------------------+
+15 rows in set (0.03 sec)
+
+9). WAQ to display the name,salary,and salary decremneted by 5000 from employee_name?
+
+mysql> select name,salary, salary-5000 salary_decrement from employee_info;
++---------+--------+------------------+
+| name    | salary | salary_decrement |
++---------+--------+------------------+
+| Vignesh |  30000 |            25000 |
+| Indhu   |  70000 |            65000 |
+| Aniket  |  25000 |            20000 |
+| Varun   |  70000 |            65000 |
+| Saurabh |  30000 |            25000 |
+| Vishal  |  40000 |            35000 |
+| Pranali |  80000 |            75000 |
+| Ashwini |  30000 |            25000 |
+| Atharva |  90000 |            85000 |
+| Parth   |  90000 |            85000 |
+| Santosh |  35000 |            30000 |
+| Mukesh  |  36000 |            31000 |
+| Furqan  |  39000 |            34000 |
+| Aman    |  35000 |            30000 |
+| Avinash |  90000 |            85000 |
++---------+--------+------------------+
+15 rows in set (0.30 sec)
+
+10). WAQ to display the name,salary,and annual_salary  from employee_name?
+
+ select name,salary, salary*12 annual_salary from employee_info;
++---------+--------+---------------+
+| name    | salary | annual_salary |
++---------+--------+---------------+
+| Vignesh |  30000 |        360000 |
+| Indhu   |  70000 |        840000 |
+| Aniket  |  25000 |        300000 |
+| Varun   |  70000 |        840000 |
+| Saurabh |  30000 |        360000 |
+| Vishal  |  40000 |        480000 |
+| Pranali |  80000 |        960000 |
+| Ashwini |  30000 |        360000 |
+| Atharva |  90000 |       1080000 |
+| Parth   |  90000 |       1080000 |
+| Santosh |  35000 |        420000 |
+| Mukesh  |  36000 |        432000 |
+| Furqan  |  39000 |        468000 |
+| Aman    |  35000 |        420000 |
+| Avinash |  90000 |       1080000 |
++---------+--------+---------------+
+
+11). WAQ to display the name,salary,and salary per day from employee_name?
+
+mysql> select name,salary, salary/30 salary_per_day from employee_info;
++---------+--------+--------------------+
+| name    | salary | salary_per_day     |
++---------+--------+--------------------+
+| Vignesh |  30000 |               1000 |
+| Indhu   |  70000 | 2333.3333333333335 |
+| Aniket  |  25000 |  833.3333333333334 |
+| Varun   |  70000 | 2333.3333333333335 |
+| Saurabh |  30000 |               1000 |
+| Vishal  |  40000 | 1333.3333333333333 |
+| Pranali |  80000 | 2666.6666666666665 |
+| Ashwini |  30000 |               1000 |
+| Atharva |  90000 |               3000 |
+| Parth   |  90000 |               3000 |
+| Santosh |  35000 | 1166.6666666666667 |
+| Mukesh  |  36000 |               1200 |
+| Furqan  |  39000 |               1300 |
+| Aman    |  35000 | 1166.6666666666667 |
+| Avinash |  90000 |               3000 |
++---------+--------+--------------------+
+
+12).Waq to display mod operation ?
+
+mysql>  select 10%3 modules;
++---------+
+| modules |
++---------+
+|       1 |
++---------+
+1 row in set (0.00 sec)
+
+13). Waq to dispaly all the records excluding dept_id =10 from employee_info?
+
+mysql> select * from employee_info where dept_id !=10;
++-----+---------+-------------------------------+--------------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| id  | name    | email                         | designation        | mobile_number | age  | Date_of_Birth | Date_of_Joining | Salary | Dept_id | Blood_group |
++-----+---------+-------------------------------+--------------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| 102 | Indhu   | indhupofficial@gmail.com      | HR                 |    8291179392 |   27 | 1992-07-19    | 2015-04-25      |  70000 |      30 | O +         |
+| 103 | Aniket  | aniketv1127@gmail.com         | Analyst            |    8850190638 |   25 | 1994-07-27    | 2014-01-19      |  25000 |      20 | O +         |
+| 104 | Varun   | sonawanevaruns@gmail.com      | HR                 |    9870763923 |   29 | 1990-11-25    | 2012-08-17      |  70000 |      40 | A +         |
+| 105 | Saurabh | saurabhjha123.sj95@gmail.com  | Software Developer |    8369882274 |   22 | 1997-02-02    | 2019-08-17      |  30000 |      20 | AB +        |
+| 108 | Ashwini | ashwinipardeshi1655@gmail.com | Software Developer |    9326130118 |   21 | 1998-01-08    | 2019-08-27      |  30000 |      30 | A +         |
+| 109 | Atharva | toskaratharva07@gmail.com     | Salesman           |    8369882274 |   20 | 1998-09-19    | 2019-06-30      |  90000 |      20 | AB -        |
+| 111 | Santosh | santosh.r.chaurasia@gmail.com | Clerk              |    8850380194 |   26 | 1993-04-20    | 2013-02-12      |  35000 |      40 | O +         |
+| 112 | Mukesh  | my0027@gmail.com              | Tester             |    7875853740 |   23 | 1995-12-09    | 2018-05-17      |  36000 |      30 | AB +        |
+| 114 | Aman    | aman.m.singh@gmail.com        | Analyst            |    7738872745 |   24 | 1995-03-27    | 2016-07-03      |  35000 |      40 | O -         |
+| 115 | Avinash | avinashmonde1997@gmail.com    | Clerk              |    9820958424 |   21 | 1998-03-01    | 2019-06-30      |  90000 |      20 | B +         |
++-----+---------+-------------------------------+--------------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+10 rows in set (0.05 sec)
+
+mysql> select * from employee_info where dept_id >10;
++-----+---------+-------------------------------+--------------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| id  | name    | email                         | designation        | mobile_number | age  | Date_of_Birth | Date_of_Joining | Salary | Dept_id | Blood_group |
++-----+---------+-------------------------------+--------------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| 102 | Indhu   | indhupofficial@gmail.com      | HR                 |    8291179392 |   27 | 1992-07-19    | 2015-04-25      |  70000 |      30 | O +         |
+| 103 | Aniket  | aniketv1127@gmail.com         | Analyst            |    8850190638 |   25 | 1994-07-27    | 2014-01-19      |  25000 |      20 | O +         |
+| 104 | Varun   | sonawanevaruns@gmail.com      | HR                 |    9870763923 |   29 | 1990-11-25    | 2012-08-17      |  70000 |      40 | A +         |
+| 105 | Saurabh | saurabhjha123.sj95@gmail.com  | Software Developer |    8369882274 |   22 | 1997-02-02    | 2019-08-17      |  30000 |      20 | AB +        |
+| 108 | Ashwini | ashwinipardeshi1655@gmail.com | Software Developer |    9326130118 |   21 | 1998-01-08    | 2019-08-27      |  30000 |      30 | A +         |
+| 109 | Atharva | toskaratharva07@gmail.com     | Salesman           |    8369882274 |   20 | 1998-09-19    | 2019-06-30      |  90000 |      20 | AB -        |
+| 111 | Santosh | santosh.r.chaurasia@gmail.com | Clerk              |    8850380194 |   26 | 1993-04-20    | 2013-02-12      |  35000 |      40 | O +         |
+| 112 | Mukesh  | my0027@gmail.com              | Tester             |    7875853740 |   23 | 1995-12-09    | 2018-05-17      |  36000 |      30 | AB +        |
+| 114 | Aman    | aman.m.singh@gmail.com        | Analyst            |    7738872745 |   24 | 1995-03-27    | 2016-07-03      |  35000 |      40 | O -         |
+| 115 | Avinash | avinashmonde1997@gmail.com    | Clerk              |    9820958424 |   21 | 1998-03-01    | 2019-06-30      |  90000 |      20 | B +         |
++-----+---------+-------------------------------+--------------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+10 rows in set (0.00 sec)
+
+
+14). Waq to display name,designation, age whose salary is greater than 30000?
+
+ select name,designation,age from employee_info where salary>30000;
++---------+-------------+------+
+| name    | designation | age  |
++---------+-------------+------+
+| Indhu   | HR          |   27 |
+| Varun   | HR          |   29 |
+| Vishal  | Tester      |   29 |
+| Pranali | HR          |   30 |
+| Atharva | Salesman    |   20 |
+| Parth   | Salesman    |   20 |
+| Santosh | Clerk       |   26 |
+| Mukesh  | Tester      |   23 |
+| Furqan  | Salesman    |   28 |
+| Aman    | Analyst     |   24 |
+| Avinash | Clerk       |   21 |
++---------+-------------+------+
+11 rows in set (0.03 sec)
+
+15). Waq to display name,designation, age whose salary is less than 40000?
+
+mysql> select name,designation,age from employee_info where salary<40000;
++---------+--------------------+------+
+| name    | designation        | age  |
++---------+--------------------+------+
+| Vignesh | Software Developer |   22 |
+| Aniket  | Analyst            |   25 |
+| Saurabh | Software Developer |   22 |
+| Ashwini | Software Developer |   21 |
+| Santosh | Clerk              |   26 |
+| Mukesh  | Tester             |   23 |
+| Furqan  | Salesman           |   28 |
+| Aman    | Analyst            |   24 |
++---------+--------------------+------+
+8 rows in set (0.00 sec)
+
+16). waq to display name and salary whose greater equal than 40000?
+
+mysql> select name,designation,age from employee_info where salary >= 40000;
++---------+-------------+------+
+| name    | designation | age  |
++---------+-------------+------+
+| Indhu   | HR          |   27 |
+| Varun   | HR          |   29 |
+| Vishal  | Tester      |   29 |
+| Pranali | HR          |   30 |
+| Atharva | Salesman    |   20 |
+| Parth   | Salesman    |   20 |
+| Avinash | Clerk       |   21 |
++---------+-------------+------+
+7 rows in set (0.00 sec)
+
+17). waq to display name and salary whose greater equal than 40000?
+
+mysql> select name,designation,age from employee_info where salary <= 80000;
++---------+--------------------+------+
+| name    | designation        | age  |
++---------+--------------------+------+
+| Vignesh | Software Developer |   22 |
+| Indhu   | HR                 |   27 |
+| Aniket  | Analyst            |   25 |
+| Varun   | HR                 |   29 |
+| Saurabh | Software Developer |   22 |
+| Vishal  | Tester             |   29 |
+| Pranali | HR                 |   30 |
+| Ashwini | Software Developer |   21 |
+| Santosh | Clerk              |   26 |
+| Mukesh  | Tester             |   23 |
+| Furqan  | Salesman           |   28 |
+| Aman    | Analyst            |   24 |
++---------+--------------------+------+
+12 rows in set (0.00 sec)
+
+18). waq to display employee who is working in dept_id = 20 and whose salary is greater than 50000 ?
+
+mysql> select * from employee_info where dept_id=20 and salary>50000;
++-----+---------+----------------------------+-------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| id  | name    | email                      | designation | mobile_number | age  | Date_of_Birth | Date_of_Joining | Salary | Dept_id | Blood_group |
++-----+---------+----------------------------+-------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| 109 | Atharva | toskaratharva07@gmail.com  | Salesman    |    8369882274 |   20 | 1998-09-19    | 2019-06-30      |  90000 |      20 | AB -        |
+| 115 | Avinash | avinashmonde1997@gmail.com | Clerk       |    9820958424 |   21 | 1998-03-01    | 2019-06-30      |  90000 |      20 | B +         |
++-----+---------+----------------------------+-------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+2 rows in set (0.00 sec)
+
+19). WAQ to display all the record for employee in employee_info who is asalesman and whose date of birth is 1991 ?
+mysql> select * from employee_info where designation='Salesman' and Date_of_Birth>'1991-01-01' and Date_of_Birth<'1991-12-31';
++-----+--------+--------------------------+-------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| id  | name   | email                    | designation | mobile_number | age  | Date_of_Birth | Date_of_Joining | Salary | Dept_id | Blood_group |
++-----+--------+--------------------------+-------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+| 113 | Furqan | shaikhfurqan75@gmail.com | Salesman    |    9029228218 |   28 | 1991-01-12    | 2009-04-07      |  39000 |      10 | A -         |
++-----+--------+--------------------------+-------------+---------------+------+---------------+-----------------+--------+---------+-------------+
+1 row in set (0.31 sec)

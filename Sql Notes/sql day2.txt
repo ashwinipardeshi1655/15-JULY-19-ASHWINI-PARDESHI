@@ -1,0 +1,148 @@
+
+DDL data definition language
+
+1). How to create a database in MySQL?
+create database ustglobal;
+mysql> create database ustglobal;
+Query OK, 1 row affected (0.33 sec)
+
+2). How to check no of database in your system using Mysql?
+show databases;
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| ustglobal          |
++--------------------+
+5 rows in set (0.02 sec)
+
+3). How to use the database?
+use ustglobal;
+Database changed
+
+4).How to see tables in your database? 
+show tables;
+Empty set (0.04 sec)
+
+5). How to create a table in a database?
+ create table student(id int, name varchar(120), email varchar(150));
+Query OK, 0 rows affected (0.72 sec)
+
+6).How to see tables in your database? 
+ show tables;
++---------------------+
+| Tables_in_ustglobal |
++---------------------+
+| student             |
++---------------------+
+1 row in set (0.00 sec)
+
+7).How to see the structrue of the table?
+desc student;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id    | int(11)      | YES  |     | NULL    |       |
+| name  | varchar(120) | YES  |     | NULL    |       |
+| email | varchar(150) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+3 rows in set (0.07 sec)
+
+8).How to drop a table?
+ drop table student;
+Query OK, 0 rows affected (0.23 sec)
+
+9).How to drop a database?
+drop database ustglobal;
+Query OK, 0 rows affected (0.21 sec)
+
+10). How to add new column in the table ?
+Alter table tablename Add column columnname datatype.
+
+alter table employee add column address varchar(120);
+Query OK, 0 rows affected (0.59 sec)
+
+ alter table employee add hobbies varchar(120);
+Query OK, 0 rows affected (0.64 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+11). How to drop new column in the table ?
+alter table employee drop columnname; 
+alter table employee drop hobbies;
+Query OK, 0 rows affected (0.54 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+12). How to change the columnname?
+ alter table employee change contact_number mobile_number int;
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+13). How to rename the table name?
+    rename table employee to employee_info;
+Query OK, 0 rows affected (0.45 sec)
+
+14). How to rename the database name?
+     After 5.1 version and 5.0 version, we cannot rename the database name
+
+
+DML data manipulation language
+
+15).How to insert values in the table ?
+  
+insert into table_name(colname,colname2)values(value1,value2)
+ insert into employee_info(id,name,email_id,mobile_number,address)values(1,'Vignesh','viggyvaithiar@gmail.com',902993798,'Mumbai');
+Query OK, 1 row affected (0.43 sec)
+
+16). how to check whether your values ar inserted in the table?
+    select * from employee_info;
++------+---------+-------------------------+---------------+---------+
+| id   | name    | email_id                | mobile_number | address |
++------+---------+-------------------------+---------------+---------+
+|    1 | Vignesh | viggyvaithiar@gmail.com |     902993798 | Mumbai  |
++------+---------+-------------------------+---------------+---------+
+1 row in set (0.00 sec)
+
+17). how to insert without using colname?
+
+ insert into employee_info values(1,'Indhu','indhupofficial@gmail.com',902993790,'Mumbai');
+Query OK, 1 row affected (0.61 sec)
+
+mysql> select * from employee_info;
++------+---------+--------------------------+---------------+---------+
+| id   | name    | email_id                 | mobile_number | address |
++------+---------+--------------------------+---------------+---------+
+|    1 | Vignesh | viggyvaithiar@gmail.com  |     902993798 | Mumbai  |
+|    1 | Indhu   | indhupofficial@gmail.com |     902993790 | Mumbai  |
++------+---------+--------------------------+---------------+---------+
+2 rows in set (0.00 sec)
+
+18). how to insert multiple values in the table?
+
+insert into employee_info values(1,'Indhu','indhupofficial@gmail.com',9029937,'Mumbai'),(3,'Viggy','viggy18@gmail.com',2345678,'Chennai'),(4,'Varun','sonawanevaruns@gmail.com',2345678,'Kharegoan');
+Query OK, 3 rows affected (0.08 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+19). How to insert values into some particular columns only?
+
+insert into employee_info(id,name)values(7,'Saurabh');
+
+ select * from employee_info;
++------+---------+--------------------------+---------------+-----------+
+| id   | name    | email_id                 | mobile_number | address   |
++------+---------+--------------------------+---------------+-----------+
+|    1 | Vignesh | viggyvaithiar@gmail.com  |     902993798 | Mumbai    |
+|    1 | Indhu   | indhupofficial@gmail.com |     902993790 | Mumbai    |
+|    1 | Indhu   | indhupofficial@gmail.com |       9029937 | Mumbai    |
+|    3 | Viggy   | viggy18@gmail.com        |       2345678 | Chennai   |
+|    4 | Varun   | sonawanevaruns@gmail.com |       2345678 | Kharegoan |
+|    7 | Saurabh | NULL                     |          NULL | NULL      |
++------+---------+--------------------------+---------------+-----------+
+6 rows in set (0.00 sec)
+
+
+
+

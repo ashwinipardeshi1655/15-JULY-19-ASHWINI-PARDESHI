@@ -1,0 +1,168 @@
+1). How to update the distinct value to new value in a table?
+
+ update student set mobile_number=128000;
+Query OK, 6 rows affected (0.13 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
+mysql> select * from student;
++------+---------+--------------------------+---------------+-----------+
+| id   | name    | email_id                 | mobile_number | address   |
++------+---------+--------------------------+---------------+-----------+
+|    1 | Vignesh | viggyvaithiar@gmail.com  |        128000 | Mumbai    |
+|    1 | Indhu   | indhupofficial@gmail.com |        128000 | Mumbai    |
+|    1 | Indhu   | indhupofficial@gmail.com |        128000 | Mumbai    |
+|    3 | Viggy   | viggy18@gmail.com        |        128000 | Chennai   |
+|    4 | Varun   | sonawanevaruns@gmail.com |        128000 | Kharegoan |
+|    7 | Saurabh | NULL                     |        128000 | NULL      |
++------+---------+--------------------------+---------------+-----------+
+6 rows in set (0.00 sec)
+
+2).how to delete records from the table ?
+
+
+ delete from student;
+Query OK, 6 rows affected (0.09 sec)
+
+mysql> select * from student;
+Empty set (0.00 
+
+3). How to delete all the record in your table?
+
+mysql> select * from student;
++------+---------+---------------------------+---------------+----------+
+| id   | name    | email_id                  | mobile_number | address  |
++------+---------+---------------------------+---------------+----------+
+|    1 | Vignesh | viggyvaithiar18@gmail.com |        128001 | Mumbai   |
+|    2 | Varun   | varuns@gmail.com          |        128098 | Mumbai   |
+|    3 | Aniket  | varmaniket@gmail.com      |        145678 | Lucknow  |
+|    4 | Saurabh | saurabh@gmail.com         |        124567 | Patna    |
+|    5 | Vishal  | vishal@gmail.com          |        126701 | Hydrabad |
++------+---------+---------------------------+---------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> truncate table student;
+Query OK, 0 rows affected (0.25 sec)
+
+mysql> select * from student;
+Empty set (0.00 sec)
+
+mysql>
+
+
+4). How to retrieve data only particular columns from the table?
+    We can go for Projection
+
+ select id,name from student;
++------+---------+
+| id   | name    |
++------+---------+
+|    1 | Vignesh |
+|    2 | Varun   |
+|    3 | Aniket  |
+|    4 | Saurabh |
+|    5 | Vishal  |
++------+---------+
+5 rows in set (0.01 sec)
+
+5). How to set particular rows from the table?
+  We can go for Selection 
+
+6).how to fetch data from multiple tables at the same time ?
+  We go for Joins.
+
+7).How to retrieve only particular rows?
+
+ select * from student where id=3;
++------+--------+----------------------+---------------+---------+
+| id   | name   | email_id             | mobile_number | address |
++------+--------+----------------------+---------------+---------+
+|    3 | Aniket | varmaniket@gmail.com |        145678 | Lucknow |
++------+--------+----------------------+---------------+---------+
+1 row in set (0.10 sec)
+
+8). how to retrieve id and name from table whose name is Vishal ?
+    
+    select id,name from student where name='Vishal';
++------+--------+
+| id   | name   |
++------+--------+
+|    5 | Vishal |
++------+--------+
+1 row in set (0.02 sec)
+
+9). how to update a particular record in the table ?
+
+ update student set address='Kharegoan' where name='Varun';
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from student;
++------+---------+---------------------------+---------------+-----------+
+| id   | name    | email_id                  | mobile_number | address   |
++------+---------+---------------------------+---------------+-----------+
+|    1 | Vignesh | viggyvaithiar18@gmail.com |        128001 | Mumbai    |
+|    2 | Varun   | varuns@gmail.com          |        128098 | Kharegoan |
+|    3 | Aniket  | varmaniket@gmail.com      |        145678 | Lucknow   |
+|    4 | Saurabh | saurabh@gmail.com         |        124567 | Patna     |
+|    5 | Vishal  | vishal@gmail.com          |        126701 | Hydrabad  |
++------+---------+---------------------------+---------------+-----------+
+5 rows in set (0.00 sec)
+
+10). how to delete a particular record in the table ?
+
+ delete from student where name='Vignesh';
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from student;
++------+---------+----------------------+---------------+-----------+
+| id   | name    | email_id             | mobile_number | address   |
++------+---------+----------------------+---------------+-----------+
+|    2 | Varun   | varuns@gmail.com     |        128098 | Kharegoan |
+|    3 | Aniket  | varmaniket@gmail.com |        145678 | Lucknow   |
+|    4 | Saurabh | saurabh@gmail.com    |        124567 | Patna     |
+|    5 | Vishal  | vishal@gmail.com     |        126701 | Hydrabad  |
++------+---------+----------------------+---------------+-----------+
+4 rows in set (0.00 sec)
+
+
+
+ create table employee(id int,name varchar(120) not null,email varchar(150),designation varchar(100),mobile_number int,age int, primary key(id));
+Query OK, 0 rows affected (0.62 sec)
+
+mysql> insert into employee values(1,'Vignesh','viggyvaithiar@gmail.com','Data Associate',1234,22);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into employee values(1,'Vignesh','viggyvaithiar@gmail.com','Data Associate',1234,22);
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql> insert into employee values(2,'Vignesh','viggyvaithiar@gmail.com','Data Associate',1234,22);
+Query OK, 1 row affected (0.34 sec)
+
+
+
+
+mysql> create table employee_info(id int,name varchar(120) not null,email varchar(150),designation varchar(100),mobile_number double,age int,Date_of_Birth date not null,Date_of_Joining date,Salary double,Dept_id int,Blood_group varchar(50), primary key(id));
+Query OK, 0 rows affected (0.33 sec)
+
+mysql> desc employee_info;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| id              | int(11)      | NO   | PRI | NULL    |       |
+| name            | varchar(120) | NO   |     | NULL    |       |
+| email           | varchar(150) | YES  |     | NULL    |       |
+| designation     | varchar(100) | YES  |     | NULL    |       |
+| mobile_number   | double       | YES  |     | NULL    |       |
+| age             | int(11)      | YES  |     | NULL    |       |
+| Date_of_Birth   | date         | NO   |     | NULL    |       |
+| Date_of_Joining | date         | YES  |     | NULL    |       |
+| Salary          | double       | YES  |     | NULL    |       |
+| Dept_id         | int(11)      | YES  |     | NULL    |       |
+| Blood_group     | varchar(50)  | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+11 rows in set (0.03 sec)
+
+
+
+
+
+

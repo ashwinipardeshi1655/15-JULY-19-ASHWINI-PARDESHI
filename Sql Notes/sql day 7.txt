@@ -1,0 +1,252 @@
+1) Waq to execute the inner join using Dept_id column from two table?
+
+   select * from employee_info e inner JOIN department_info d on e.Dept_id = d.Dept_id ;
+
+"id"	"name"	                "email"	                 "designation"	       "mobile_number"	"age"	"Date_of_Birth"	"Date_of_Joining"	"Salary"	"Dept_id"	"Blood_group"	"Dept_id"	"Dept_name"	"Location"
+"101"	"Vignesh"	"viggyvaithiar18@gmail.com"	"Software Developer"	"9029937984"	"22"	"1997-01-22"	"2019-08-17"	        "30000"	           "10"	            "O +"	"10"	        "Accounting"	"Bangalore"
+"102"	"Indhu" 	"indhupofficial@gmail.com"	"HR"	                "8291179392"	"27"	"1992-07-19"	"2015-04-25"	        "70000"	           "30"	            "O +"	"30"	         "Sales"	"New Delhi"
+"103"	"Aniket"	"aniketv1127@gmail.com"	       "Analyst"	        "8850190638"	"25"	"1994-07-27"	"2014-01-19"	        "25000"	           "20"	            "O +"	"20"	         "Research"	"Pune"
+"104"	"Varun" 	"sonawanevaruns@gmail.com"	"HR"	                "9870763923"	"29"	"1990-11-25"	"2012-08-17"	        "70000"	           "40"	            "A +"	"40"	         "Operation"	"Chennai"
+"105"	"Saurabh"	"saurabhjha123.sj95@gmail.com"	"Software Developer"	"8369882274"	"22"	"1997-02-02"	"2019-08-17"	        "30000"	           "20"	            "AB +"	"20"	         "Research"	"Pune"
+"106"	"Vishal"	"vishalpippirishetti@gmail.com"	"Tester"	        "8928088554"	"29"	"1990-12-05"	"2015-01-22"	        "40000"	           "10"	            "A +"	"10"	         "Accounting"	"Bangalore"
+"107"	"Pranali"	"shirodkarpranali123@gmail.com"	"HR"	                "9022314944"	"30"	"1989-03-16"	"2009-12-05"	        "80000"	           "10"	            "B +"	"10"	         "Accounting"	"Bangalore"
+"108"	"Ashwini"	"ashwinipardeshi1655@gmail.com"	"Software Developer"	"9326130118"	"21"	"1998-01-08"	"2019-08-27"	        "30000"	           "30"	            "A +"	"30"	         "Sales"	"New Delhi"
+"109"	"Atharva"	"toskaratharva07@gmail.com"	"Salesman"	        "8369882274"	"20"	"1998-09-19"	"2019-06-30"	        "90000"	           "20"	            "AB -"	"20"	         "Research"	"Pune"
+"110"	"Parth"	         "parth.hursale@gmail.com"	"Salesman"	        "8652162963"	"20"	"1998-04-30"	"2019-06-30"	        "90000"	           "10"	            "B -"	"10"	         "Accounting"	"Bangalore"
+"111"	"Santosh"	"santosh.r.chaurasia@gmail.com"	"Clerk"	                "8850380194"	"26"	"1993-04-20"	"2013-02-12"	        "35000"	           "40"	            "O +"	"40"	         "Operation"	"Chennai"
+"112"	"Mukesh"	"my0027@gmail.com"	        "Tester"	        "7875853740"	"23"	"1995-12-09"	"2018-05-17"	        "36000"	           "30"	            "AB +"	"30"	         "Sales"	"New Delhi"
+"113"	"Furqan"	"shaikhfurqan75@gmail.com"	"Salesman"	        "9029228218"	"28"	"1991-01-12"	"2009-04-07"	        "39000"	           "10"	            "A -"	"10"	         "Accounting"	"Bangalore"
+"114"	"Aman"	        "aman.m.singh@gmail.com"	"Analyst"	        "7738872745"	"24"	"1995-03-27"	"2016-07-03"	        "35000"	           "40"	            "O -"	"40"	         "Operation"	"Chennai"
+"115"	"Avinash"	"avinashmonde1997@gmail.com"	"Clerk"	                "9820958424"	"21"	"1998-03-01"	"2019-06-30"	        "90000"	           "20"	            "B +"	"20"	         "Research"	"Pune"
+
+
+2) Waq to execute the left outer join using Dept_id column from two table?
+
+    select * from department_info d left OUTER JOIN employee_info e on d.Dept_id = e.Dept_id;
+
+"Dept_id"	"Dept_name"	"Location"	"id"	"name"	"email"	"designation"	"mobile_number"	"age"	"Date_of_Birth"	"Date_of_Joining"	"Salary"	"Dept_id"	"Blood_group"
+"10"	"Accounting"	"Bangalore"	"101"	"Vignesh"	"viggyvaithiar18@gmail.com"	"Software Developer"	"9029937984"	"22"	"1997-01-22"	"2019-08-17"	"30000"	"10"	"O +"
+"30"	"Sales"	"New Delhi"	"102"	"Indhu"	"indhupofficial@gmail.com"	"HR"	"8291179392"	"27"	"1992-07-19"	"2015-04-25"	"70000"	"30"	"O +"
+"20"	"Research"	"Pune"	"103"	"Aniket"	"aniketv1127@gmail.com"	"Analyst"	"8850190638"	"25"	"1994-07-27"	"2014-01-19"	"25000"	"20"	"O +"
+"40"	"Operation"	"Chennai"	"104"	"Varun"	"sonawanevaruns@gmail.com"	"HR"	"9870763923"	"29"	"1990-11-25"	"2012-08-17"	"70000"	"40"	"A +"
+"20"	"Research"	"Pune"	"105"	"Saurabh"	"saurabhjha123.sj95@gmail.com"	"Software Developer"	"8369882274"	"22"	"1997-02-02"	"2019-08-17"	"30000"	"20"	"AB +"
+"10"	"Accounting"	"Bangalore"	"106"	"Vishal"	"vishalpippirishetti@gmail.com"	"Tester"	"8928088554"	"29"	"1990-12-05"	"2015-01-22"	"40000"	"10"	"A +"
+"10"	"Accounting"	"Bangalore"	"107"	"Pranali"	"shirodkarpranali123@gmail.com"	"HR"	"9022314944"	"30"	"1989-03-16"	"2009-12-05"	"80000"	"10"	"B +"
+"30"	"Sales"	"New Delhi"	"108"	"Ashwini"	"ashwinipardeshi1655@gmail.com"	"Software Developer"	"9326130118"	"21"	"1998-01-08"	"2019-08-27"	"30000"	"30"	"A +"
+"20"	"Research"	"Pune"	"109"	"Atharva"	"toskaratharva07@gmail.com"	"Salesman"	"8369882274"	"20"	"1998-09-19"	"2019-06-30"	"90000"	"20"	"AB -"
+"10"	"Accounting"	"Bangalore"	"110"	"Parth"	"parth.hursale@gmail.com"	"Salesman"	"8652162963"	"20"	"1998-04-30"	"2019-06-30"	"90000"	"10"	"B -"
+"40"	"Operation"	"Chennai"	"111"	"Santosh"	"santosh.r.chaurasia@gmail.com"	"Clerk"	"8850380194"	"26"	"1993-04-20"	"2013-02-12"	"35000"	"40"	"O +"
+"30"	"Sales"	"New Delhi"	"112"	"Mukesh"	"my0027@gmail.com"	"Tester"	"7875853740"	"23"	"1995-12-09"	"2018-05-17"	"36000"	"30"	"AB +"
+"10"	"Accounting"	"Bangalore"	"113"	"Furqan"	"shaikhfurqan75@gmail.com"	"Salesman"	"9029228218"	"28"	"1991-01-12"	"2009-04-07"	"39000"	"10"	"A -"
+"40"	"Operation"	"Chennai"	"114"	"Aman"	"aman.m.singh@gmail.com"	"Analyst"	"7738872745"	"24"	"1995-03-27"	"2016-07-03"	"35000"	"40"	"O -"
+"20"	"Research"	"Pune"	"115"	"Avinash"	"avinashmonde1997@gmail.com"	"Clerk"	"9820958424"	"21"	"1998-03-01"	"2019-06-30"	"90000"	"20"	"B +"
+"50"	"Admin"	"Mumbai"	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+"60"	"Maintenance"	"Goa"	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+
+
+
+2) Waq to execute the right outer join using Dept_id column from two table?
+
+    select * from department_info d right OUTER JOIN employee_info e on d.Dept_id = e.Dept_id;
+
+
+
+"Dept_id"	"Dept_name"	"Location"	"id"	"name"	"email"	"designation"	"mobile_number"	"age"	"Date_of_Birth"	"Date_of_Joining"	"Salary"	"Dept_id"	"Blood_group"
+"10"	"Accounting"	"Bangalore"	"101"	"Vignesh"	"viggyvaithiar18@gmail.com"	"Software Developer"	"9029937984"	"22"	"1997-01-22"	"2019-08-17"	"30000"	"10"	"O +"
+"30"	"Sales"	"New Delhi"	"102"	"Indhu"	"indhupofficial@gmail.com"	"HR"	"8291179392"	"27"	"1992-07-19"	"2015-04-25"	"70000"	"30"	"O +"
+"20"	"Research"	"Pune"	"103"	"Aniket"	"aniketv1127@gmail.com"	"Analyst"	"8850190638"	"25"	"1994-07-27"	"2014-01-19"	"25000"	"20"	"O +"
+"40"	"Operation"	"Chennai"	"104"	"Varun"	"sonawanevaruns@gmail.com"	"HR"	"9870763923"	"29"	"1990-11-25"	"2012-08-17"	"70000"	"40"	"A +"
+"20"	"Research"	"Pune"	"105"	"Saurabh"	"saurabhjha123.sj95@gmail.com"	"Software Developer"	"8369882274"	"22"	"1997-02-02"	"2019-08-17"	"30000"	"20"	"AB +"
+"10"	"Accounting"	"Bangalore"	"106"	"Vishal"	"vishalpippirishetti@gmail.com"	"Tester"	"8928088554"	"29"	"1990-12-05"	"2015-01-22"	"40000"	"10"	"A +"
+"10"	"Accounting"	"Bangalore"	"107"	"Pranali"	"shirodkarpranali123@gmail.com"	"HR"	"9022314944"	"30"	"1989-03-16"	"2009-12-05"	"80000"	"10"	"B +"
+"30"	"Sales"	"New Delhi"	"108"	"Ashwini"	"ashwinipardeshi1655@gmail.com"	"Software Developer"	"9326130118"	"21"	"1998-01-08"	"2019-08-27"	"30000"	"30"	"A +"
+"20"	"Research"	"Pune"	"109"	"Atharva"	"toskaratharva07@gmail.com"	"Salesman"	"8369882274"	"20"	"1998-09-19"	"2019-06-30"	"90000"	"20"	"AB -"
+"10"	"Accounting"	"Bangalore"	"110"	"Parth"	"parth.hursale@gmail.com"	"Salesman"	"8652162963"	"20"	"1998-04-30"	"2019-06-30"	"90000"	"10"	"B -"
+"40"	"Operation"	"Chennai"	"111"	"Santosh"	"santosh.r.chaurasia@gmail.com"	"Clerk"	"8850380194"	"26"	"1993-04-20"	"2013-02-12"	"35000"	"40"	"O +"
+"30"	"Sales"	"New Delhi"	"112"	"Mukesh"	"my0027@gmail.com"	"Tester"	"7875853740"	"23"	"1995-12-09"	"2018-05-17"	"36000"	"30"	"AB +"
+"10"	"Accounting"	"Bangalore"	"113"	"Furqan"	"shaikhfurqan75@gmail.com"	"Salesman"	"9029228218"	"28"	"1991-01-12"	"2009-04-07"	"39000"	"10"	"A -"
+"40"	"Operation"	"Chennai"	"114"	"Aman"	"aman.m.singh@gmail.com"	"Analyst"	"7738872745"	"24"	"1995-03-27"	"2016-07-03"	"35000"	"40"	"O -"
+"20"	"Research"	"Pune"	"115"	"Avinash"	"avinashmonde1997@gmail.com"	"Clerk"	"9820958424"	"21"	"1998-03-01"	"2019-06-30"	"90000"	"20"	"B +"
+\N	\N	\N	"116"	"Ashutosh"	\N	"Analyst"	\N	"23"	"1995-08-11"	"2019-01-22"	"40000"	\N	\N
+
+
+
+
+3). how to create and execute view 
+
+      CREATE
+    
+    VIEW `ust`.`EmpDesg` 
+    AS
+    SELECT * FROM employee_info WHERE designation = 'tester';
+
+      SELECT * FROM EmpDesg;
+
+
+"id"	"name"	"email"	"designation"	"mobile_number"	"age"	"Date_of_Birth"	"Date_of_Joining"	"Salary"	"Dept_id"	"Blood_group"
+"106"	"Vishal"	"vishalpippirishetti@gmail.com"	"Tester"	"8928088554"	"29"	"1990-12-05"	"2015-01-22"	"40000"	"10"	"A +"
+"112"	"Mukesh"	"my0027@gmail.com"	"Tester"	"7875853740"	"23"	"1995-12-09"	"2018-05-17"	"36000"	"30"	"AB +"
+
+
+
+
+
+UPDATE EmpDesg Set name = 'VishaalP' where id = 106;
+
+SELECT * from EmpDesg;
+
+"id"	"name"	"email"	"designation"	"mobile_number"	"age"	"Date_of_Birth"	"Date_of_Joining"	"Salary"	"Dept_id"	"Blood_group"
+"106"	"VishaalP"	"vishalpippirishetti@gmail.com"	"Tester"	"8928088554"	"29"	"1990-12-05"	"2015-01-22"	"40000"	"10"	"A +"
+"112"	"Mukesh"	"my0027@gmail.com"	"Tester"	"7875853740"	"23"	"1995-12-09"	"2018-05-17"	"36000"	"30"	"AB +"
+
+
+
+
+"id"	"name"	"email"	"designation"	"mobile_number"	"age"	"Date_of_Birth"	"Date_of_Joining"	"Salary"	"Dept_id"	"Blood_group"
+"101"	"Vignesh"	"viggyvaithiar18@gmail.com"	"Software Developer"	"9029937984"	"22"	"1997-01-22"	"2019-08-17"	"30000"	"10"	"O +"
+"102"	"Indhu"	"indhupofficial@gmail.com"	"HR"	"8291179392"	"27"	"1992-07-19"	"2015-04-25"	"70000"	"30"	"O +"
+"103"	"Aniket"	"aniketv1127@gmail.com"	"Analyst"	"8850190638"	"25"	"1994-07-27"	"2014-01-19"	"25000"	"20"	"O +"
+"104"	"Varun"	"sonawanevaruns@gmail.com"	"HR"	"9870763923"	"29"	"1990-11-25"	"2012-08-17"	"70000"	"40"	"A +"
+"105"	"Saurabh"	"saurabhjha123.sj95@gmail.com"	"Software Developer"	"8369882274"	"22"	"1997-02-02"	"2019-08-17"	"30000"	"20"	"AB +"
+"106"	"VishaalP"	"vishalpippirishetti@gmail.com"	"Tester"	"8928088554"	"29"	"1990-12-05"	"2015-01-22"	"40000"	"10"	"A +"
+"107"	"Pranali"	"shirodkarpranali123@gmail.com"	"HR"	"9022314944"	"30"	"1989-03-16"	"2009-12-05"	"80000"	"10"	"B +"
+"108"	"Ashwini"	"ashwinipardeshi1655@gmail.com"	"Software Developer"	"9326130118"	"21"	"1998-01-08"	"2019-08-27"	"30000"	"30"	"A +"
+"109"	"Atharva"	"toskaratharva07@gmail.com"	"Salesman"	"8369882274"	"20"	"1998-09-19"	"2019-06-30"	"90000"	"20"	"AB -"
+"110"	"Parth"	"parth.hursale@gmail.com"	"Salesman"	"8652162963"	"20"	"1998-04-30"	"2019-06-30"	"90000"	"10"	"B -"
+"111"	"Santosh"	"santosh.r.chaurasia@gmail.com"	"Clerk"	"8850380194"	"26"	"1993-04-20"	"2013-02-12"	"35000"	"40"	"O +"
+"112"	"Mukesh"	"my0027@gmail.com"	"Tester"	"7875853740"	"23"	"1995-12-09"	"2018-05-17"	"36000"	"30"	"AB +"
+"113"	"Furqan"	"shaikhfurqan75@gmail.com"	"Salesman"	"9029228218"	"28"	"1991-01-12"	"2009-04-07"	"39000"	"10"	"A -"
+"114"	"Aman"	"aman.m.singh@gmail.com"	"Analyst"	"7738872745"	"24"	"1995-03-27"	"2016-07-03"	"35000"	"40"	"O -"
+"115"	"Avinash"	"avinashmonde1997@gmail.com"	"Clerk"	"9820958424"	"21"	"1998-03-01"	"2019-06-30"	"90000"	"20"	"B +"
+"116"	"Ashutosh"	\N	"Analyst"	\N	"23"	"1995-08-11"	"2019-01-22"	"40000"	\N	\N
+
+
+
+
+
+ select * from department_info;
++---------+-------------+-----------+
+| Dept_id | Dept_name   | Location  |
++---------+-------------+-----------+
+|      10 | Accounting  | Bangalore |
+|      20 | Research    | Pune      |
+|      30 | Sales       | New Delhi |
+|      40 | Operation   | Chennai   |
+|      50 | Admin       | Mumbai    |
+|      60 | Maintenance | Goa       |
++---------+-------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> insert into department_info values(55,'tester','patna');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from department_info;
++---------+-------------+-----------+
+| Dept_id | Dept_name   | Location  |
++---------+-------------+-----------+
+|      10 | Accounting  | Bangalore |
+|      20 | Research    | Pune      |
+|      30 | Sales       | New Delhi |
+|      40 | Operation   | Chennai   |
+|      50 | Admin       | Mumbai    |
+|      55 | tester      | patna     |
+|      60 | Maintenance | Goa       |
++---------+-------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> set autocommit = 0;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into department_info values(75,'security','mysore');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from department_info;
++---------+-------------+-----------+
+| Dept_id | Dept_name   | Location  |
++---------+-------------+-----------+
+|      10 | Accounting  | Bangalore |
+|      20 | Research    | Pune      |
+|      30 | Sales       | New Delhi |
+|      40 | Operation   | Chennai   |
+|      50 | Admin       | Mumbai    |
+|      55 | tester      | patna     |
+|      60 | Maintenance | Goa       |
+|      75 | security    | mysore    |
++---------+-------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> select * from department_info;
++---------+-------------+-----------+
+| Dept_id | Dept_name   | Location  |
++---------+-------------+-----------+
+|      10 | Accounting  | Bangalore |
+|      20 | Research    | Pune      |
+|      30 | Sales       | New Delhi |
+|      40 | Operation   | Chennai   |
+|      50 | Admin       | Mumbai    |
+|      55 | tester      | patna     |
+|      60 | Maintenance | Goa       |
++---------+-------------+-----------+
+7 rows in set (0.00 sec)
+
+
+
+
+
+ insert into department_info values(75,'Security','Mysore');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from department_info;
++---------+-------------+-----------+
+| Dept_id | Dept_name   | Location  |
++---------+-------------+-----------+
+|      10 | Accounting  | Bangalore |
+|      20 | Research    | Pune      |
+|      30 | Sales       | New Delhi |
+|      40 | Operation   | Chennai   |
+|      50 | Admin       | Mumbai    |
+|      55 | tester      | patna     |
+|      60 | Maintenance | Goa       |
+|      75 | Security    | Mysore    |
++---------+-------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> select * from department_info;
++---------+-------------+-----------+
+| Dept_id | Dept_name   | Location  |
++---------+-------------+-----------+
+|      10 | Accounting  | Bangalore |
+|      20 | Research    | Pune      |
+|      30 | Sales       | New Delhi |
+|      40 | Operation   | Chennai   |
+|      50 | Admin       | Mumbai    |
+|      55 | tester      | patna     |
+|      60 | Maintenance | Goa       |
+|      75 | Security    | Mysore    |
++---------+-------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from department_info;
++---------+-------------+-----------+
+| Dept_id | Dept_name   | Location  |
++---------+-------------+-----------+
+|      10 | Accounting  | Bangalore |
+|      20 | Research    | Pune      |
+|      30 | Sales       | New Delhi |
+|      40 | Operation   | Chennai   |
+|      50 | Admin       | Mumbai    |
+|      55 | tester      | patna     |
+|      60 | Maintenance | Goa       |
+|      75 | Security    | Mysore    |
++---------+-------------+-----------+
+8 rows in set (0.00 sec)
+
