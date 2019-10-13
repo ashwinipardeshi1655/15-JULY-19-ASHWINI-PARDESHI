@@ -1,0 +1,14 @@
+
+<div class="container">
+    <div id="newsdisplay" class="card card-body col-md-3 offset-md-1 mt-4 float-left" *ngFor='let c of carsService.cars'>
+        <h1>{{c.brand}}</h1>
+        <h2>{{c.model}}</h2>
+        <h3>{{c.year}}</h3>
+        <h4>{{c.cost | currency : 'INR'}}</h4>
+        <h5>{{c.nous}}</h5>
+        <button class="btn btn-outline-warning" (click)='updateCar(c)'>Update</button>      
+        <button class="btn btn-outline-danger" (click)='deleteCar(c)'>Delete</button>      
+    </div>
+</div>
+
+

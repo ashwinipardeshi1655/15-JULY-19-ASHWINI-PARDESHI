@@ -1,0 +1,29 @@
+<div class="container">
+    <div class=" col-md-6 offset-md-3 card card-body mt-4">
+        <form #carForm='ngForm' (ngSubmit)='postCar(carForm)'>
+            <legend>Cars Details</legend>
+            <input type="hidden" name="id" #id='ngModel' [(ngModel)]='carsService.selectedCars.id'>
+            <div class="form-group">
+                <label for="">Brand</label>
+                <input type="text" class="form-control" id="" name="brand" placeholder="Brand Name" #brand = 'ngModel'[(ngModel)]='carsService.selectedCars.brand'>
+            </div>
+            <div class="form-group">
+                <label for="">Model</label>
+                <input type="text" class="form-control" id="" name="model" placeholder="Model Number" #model = 'ngModel' [(ngModel)]='carsService.selectedCars.model'>
+            </div>
+            <div class="form-group">
+                <label for="">Year</label>
+                <input type="number" class="form-control" id="" name="year" placeholder="Enter Year " #year = 'ngModel' [(ngModel)]='carsService.selectedCars.year'>
+            </div>
+            <div class="form-group">
+                <label for="">Cost</label>
+                <input type="number" class="form-control" id="" name="cost" placeholder="Cost" #cost = 'ngModel' [(ngModel)]='carsService.selectedCars.cost'>
+            </div>
+            <div class="form-group">
+                <label for="">Number of Units Sold</label>
+                <input type="number" class="form-control" id="" name="nous" placeholder="Units Sold" #nous = 'ngModel' [(ngModel)]='carsService.selectedCars.nous'>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
