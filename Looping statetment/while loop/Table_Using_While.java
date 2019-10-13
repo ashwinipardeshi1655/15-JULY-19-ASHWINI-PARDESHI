@@ -1,0 +1,15 @@
+public class Table_Using_While{
+	public static void main(String[]args){
+		
+		int i=1;
+		int n = 37;
+		int n1;
+		
+		while(i<=10){
+			n1 = n*i;
+			System.out.println(n1);
+			i++;
+		}
+}}
+			
+		
