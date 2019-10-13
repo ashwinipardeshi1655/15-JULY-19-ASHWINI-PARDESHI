@@ -1,0 +1,25 @@
+<table class="table table-bordered table-hover bg-dark text-light">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Photos</th>
+            <th>repoURI</th>
+            <th>URL</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let u of users'>
+            <td>{{u.id}}</td>
+            <td>{{u.node_id}}</td>
+            <td>
+                <img src = "{{u.avatar_url}}" class = "img">
+            </td>
+            <td>{{u.repos_url}}</td>
+            <td>{{u.url}}</td>
+            <td><button class = "btn btn-outline-danger" (click) = "deleteData(u.id)">Delete</button></td>
+        </tr>
+        
+    </tbody>
+</table>

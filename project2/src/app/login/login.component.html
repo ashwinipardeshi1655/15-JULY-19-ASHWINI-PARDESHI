@@ -1,0 +1,26 @@
+
+<form action="" #loginForm = 'ngForm' (ngSubmit) = 'sendData(loginForm)'  role="form">
+    <legend>Form title</legend>
+
+    <div class="form-group">
+        <label for="uname">username</label>
+        <input type="text" class="form-control" id="a" placeholder="Input field" name="uname" #uname = 'ngModel' ngModel required minlength="3">
+        <div class = "text-danger" *ngIf = 'uname.invalid && uname.touched'>
+            <div class="text-danger" *ngIf = 'uname.errors.required'>This field is required</div>
+            <div class="text-danger" *ngIf = 'uname.errors.minlength'>Minimum length should be 3</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">password</label>
+        <input type="password" class="form-control" id="v" placeholder="Input field" name="password" #password = 'ngModel' ngModel required minlength="3">
+        <div class = "text-danger" *ngIf = 'password.invalid && password.touched'>
+            <div class="text-danger" *ngIf = 'password.errors.required'>This field is required</div>
+            <div class="text-danger" *ngIf = 'password.errors.minlength'>Minimum length should be 3</div>
+        </div>
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary" [disabled] = 'loginForm.invalid'>Submit</button>
+</form>
