@@ -1,0 +1,27 @@
+<!-- creating template driven form -->
+
+<div class = "col-md-6 offset-3 mt-5">
+    <div class = "card card-body">
+        <form action="" #form = 'ngForm' (ngSubmit) = "registerData(form.value)">         
+            <legend>Register</legend>
+            <div class="form-group">
+                <input type="text" class="form-control" name="uname" #uname = 'ngModel' ngModel placeholder="Enter username" required minlength="4">
+                    <div *ngIf = "uname.invalid && uname.touched">
+                        <div class="alert alert-danger" *ngIf = "uname.errors.required">It is mandatory field</div>         <!-- this is validation for username -->  
+                        <div class="alert alert-danger" *ngIf = "uname.errors.minlength">minimum length is 4</div>          <!-- this is validation for username -->
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" name="pass" #pass = 'ngModel' ngModel placeholder="Enter password" required minlength="4">
+                    <div *ngIf = "pass.invalid && upass.touched">
+                        <div class="alert alert-danger" *ngIf = "pass.errors.required">It is mandatory field</div>           <!-- this is validation for password -->
+                        <div class="alert alert-danger" *ngIf = "pass.errors.minlength">minimum length is 4</div>            <!-- this is validation for password -->
+                    </div>
+            </div>
+
+            <button type="button" class="btn btn-outline-primary" [disabled]= 'form.invalid' (click) = 'registerData(form)' >Register</button>              <!-- this is validation for button -->
+        </form>
+
+    </div>
+</div>
